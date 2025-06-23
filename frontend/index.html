@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strmly Demo</title>
+  <style>
+    body { font-family: sans-serif; margin: 2rem; }
+    .hidden { display: none; }
+    .card { border: 1px solid #ccc; padding: 1rem; margin-bottom: 1rem; }
+    video { max-width: 100%; height: auto; }
+    label { display: block; margin-top: 0.5rem; }
+    input, textarea { width: 100%; margin-bottom: 0.5rem; }
+    button { margin-top: 0.5rem; }
+  </style>
+</head>
+<body>
+  <h1>Strmly Demo</h1>
+  <div id="auth-section">
+    <button id="show-login-btn">Login</button>
+    <button id="show-register-btn">Register</button>
+    <div id="login-form-container" class="hidden">
+      <h2>Login</h2>
+      <form id="login-form">
+        <label>Email: <input type="email" id="login-email" required></label>
+        <label>Password: <input type="password" id="login-password" required></label>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    <div id="register-form-container" class="hidden">
+      <h2>Register</h2>
+      <form id="signup-form">
+        <label>Name: <input type="text" id="signup-name" required></label>
+        <label>Email: <input type="email" id="signup-email" required></label>
+        <label>Password: <input type="password" id="signup-password" required></label>
+        <button type="submit">Register</button>
+      </form>
+    </div>
+    <div id="auth-message"></div>
+  </div>
+  <div id="main-section" class="hidden">
+    <div id="user-info"></div>
+    <div id="upload-section">
+      <h2>Upload Video</h2>
+      <form id="upload-form">
+        <label>Title: <input type="text" id="upload-title" required></label>
+        <label>Description: <textarea id="upload-description" required></textarea></label>
+        <label>File: <input type="file" id="upload-file" accept="video/mp4,video/mkv" required></label>
+        <button type="submit">Upload</button>
+      </form>
+      <div id="upload-message"></div>
+    </div>
+    <div id="feed-section">
+      <h2>Feed</h2>
+      <div id="feed-container"></div>
+    </div>
+    <button id="logout-btn">Logout</button>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html> 

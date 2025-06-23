@@ -2,6 +2,7 @@ import express from "express";
 import errorHandler from "./middleware/errorHandler.js";
 import helmet from "helmet";
 import rateLimit from "express-rate-limit";
+import cors from "cors";
 
 import authRoutes from "./routes/authRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
@@ -9,6 +10,7 @@ import getVideoRoutes from "./routes/getVideoRoutes.js";
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(helmet());
