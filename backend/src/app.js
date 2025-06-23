@@ -27,14 +27,14 @@ const limiter = rateLimit({
 });
 app.use(limiter);
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "..", "public")));
 
 app.use("/api/auth", authRoutes);
 app.use("/api/video", uploadRoutes);
 app.use("/api/allvideo", getVideoRoutes);
 
 app.use((req, res, next) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+  res.sendFile(path.join(__dirname, "..", "public", "index.html"));
 });
 
 app.use(errorHandler);
