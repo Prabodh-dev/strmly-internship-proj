@@ -13,7 +13,7 @@ const userInfo = document.getElementById("user-info");
 const showLoginBtn = document.getElementById("show-login-btn");
 const showRegisterBtn = document.getElementById("show-register-btn");
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = "";
 
 function showAuth() {
   authSection.classList.remove("hidden");
